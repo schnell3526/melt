@@ -16,15 +16,7 @@ limitations under the License.
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
-)
-
-var (
-	ver    string = "1.0.0"
-	commit string = ""
-	date   string = ""
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -35,12 +27,7 @@ var rootCmd = &cobra.Command{
 melt is a CLI tool that allows you to easily compress and decompress files in a variety of formats.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
-	Run: func(cmd *cobra.Command, args []string) {
-		version, _ := cmd.Flags().GetBool("version")
-		if version {
-			fmt.Println(ver, commit, date)
-		}
-	},
+	// Run: func(cmd *cobra.Command, args []string) {},
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
